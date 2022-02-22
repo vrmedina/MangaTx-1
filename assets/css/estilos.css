@@ -1,6 +1,22 @@
+@font-face {
+    font-family: 'iconos';
+    src:  url('../fonts/iconos/icomoon.eot?g9vguz');
+    src:  url('../fonts/iconos/icomoon.eot?g9vguz#iefix') format('embedded-opentype'),
+      url('../fonts/iconos/icomoon.ttf?g9vguz') format('truetype'),
+      url('../fonts/iconos/icomoon.woff?g9vguz') format('woff'),
+      url('../fonts/iconos/icomoon.svg?g9vguz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 
 header {
     background: #1b691a;
@@ -33,4 +49,136 @@ header .lista-principal ul li a {
 
 header .boton-busqueda {
     float: right;
+}
+
+header .lista-principal .casita::before {
+    font-family: 'iconos';
+    content: '\f015';
+}
+
+header .lista-principal .carpeta::before {
+    font-family: 'iconos';
+    content: '\f115';
+}
+header .boton-busqueda .boton {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header .boton-busqueda .boton .lupa::before {
+    font-family: 'iconos';
+    content: '\f002';
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 35px 0px 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav ul li a .discord-ico::before {
+    font-family: 'iconos';
+    content: '\e900';
+}
+
+nav ul li a .engranaje::before {
+    font-family: 'iconos';
+    content: '\f085';
+}
+
+nav ul li a .flecha::after {
+    font-family: 'iconos';
+    content: '\ea1c';
+}
+
+section .titulo-seccion p .rayo-ico {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: green;
+    text-align: center;
+    line-height: 30px;
+}
+
+section .titulo-seccion p .rayo-ico::before {
+    font-family: 'iconos';
+    content: '\f0e7';
+    color: white;
+}
+
+section .titulo-seccion p {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+section .articulos .logo-art, section .articulos .contenido-art {
+    display: inline-block;
+}
+
+section .articulos .contenido-art {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+section .articulos .logo-art img {
+    width: 150px;
+}
+
+section .articulos .contenido-art .titulo-manga h3 {
+    margin: 0px;
+}
+
+section .articulos .contenido-art .cal-manga .cal-grafig p {
+    margin: 0px;
+}
+
+section .articulos .contenido-art .cal-manga .cal-grafig .estrella::before {
+    font-family: 'iconos';
+    content: '\e9d9';
+    color: #1b691a;
+}
+
+section .articulos .contenido-art .cal-manga .cal-grafig, section .articulos .contenido-art .cal-manga .cal-numero {
+    display: inline-block;
+}
+
+section .articulos .contenido-art .cal-manga .cal-numero {
+    margin-left: 10px;
+}
+
+section .articulos .contenido-art .cal-manga .cal-numero p {
+   margin: 10px 0px 20px 0px;
+}
+
+
+section .articulos .contenido-art .capitulos .capitulo-etiqueta {
+    margin-bottom: 20px;
+}
+
+section .articulos .contenido-art .capitulos a {
+    text-decoration: none;
+    color: #666666;
+    background: #ebebeb;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+section .articulos .contenido-art .capitulos a:hover {
+    color: white;
+    background: #1b691a;
 }

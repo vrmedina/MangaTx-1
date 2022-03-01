@@ -10,20 +10,28 @@
     font-display: block;
   }
 
-
+  @font-face {
+    font-family: 'poppins';
+    src: url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins';
 }
-
-
 
 header {
     background: #1b691a;
 }
 
+header .logo {
+    margin: 30px 0px 20px 80px;
+}
+
 header .logo img {
-    width: 232px;
+    width: 202px;
 }
 
 header .boton-busqueda p {
@@ -35,6 +43,11 @@ header .boton-busqueda p {
 
 header .logo, header .lista-principal, header .boton-busqueda {
     display: inline-block;
+}
+
+header .lista-principal {
+    vertical-align: top;
+    margin-top: 30px;
 }
 
 header .lista-principal ul li {
@@ -49,6 +62,7 @@ header .lista-principal ul li a {
 
 header .boton-busqueda {
     float: right;
+    margin: 10px 100px 0px 0px;
 }
 
 header .lista-principal .casita::before {
@@ -74,6 +88,10 @@ header .boton-busqueda .boton .lupa::before {
     height: fit-content;
     position: absolute;
     left: 0; top: 0; bottom: 0; right: 0;
+}
+
+nav {
+    margin-left: 40px;
 }
 
 nav ul li {
@@ -104,6 +122,10 @@ nav ul li a .flecha::after {
     content: '\ea1c';
 }
 
+section {
+    margin: 60px 0px 0px 80px;
+}
+
 section .titulo-seccion p .rayo-ico {
     width: 30px;
     height: 30px;
@@ -119,10 +141,15 @@ section .titulo-seccion p .rayo-ico::before {
     color: white;
 }
 
+section .titulo-seccion p{
+    margin: 0px;
+}
+
 section .titulo-seccion p {
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: 2px solid #f0f0f0;
+    width: 80%;
 }
 
 section .articulos .logo-art, section .articulos .contenido-art {
@@ -135,7 +162,21 @@ section .articulos .contenido-art {
 }
 
 section .articulos .logo-art img {
-    width: 150px;
+    width: 110px;
+}
+
+section article {
+    display: inline-block;
+}
+
+section article:nth-child(1) {
+    margin-right: 150px;
+}
+
+section .articulos .par-arts {
+    border-bottom: 2px solid #f0f0f0;
+    padding: 25px 0px 25px 0px;
+    width: 80%;
 }
 
 section .articulos .contenido-art .titulo-manga h3 {
@@ -181,4 +222,116 @@ section .articulos .contenido-art .capitulos a {
 section .articulos .contenido-art .capitulos a:hover {
     color: white;
     background: #1b691a;
+}
+
+footer {
+    padding: 60px 0px 60px 0px;
+    border-top: 3px solid #ebebeb;
+    text-align: center;
+    display: block;
+}
+
+footer .categorias {
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin: 0% 10% 0% 10%;
+    border-bottom: 4px solid #1b691a;
+}
+
+footer .categorias .titulo-cat h5{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    background-color: #1b691a;
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 15px;
+    color: white;
+}
+
+footer .categorias .lista-cat ul {
+    text-align: left;
+}
+
+footer .categorias .lista-cat ul li{
+    display: inline-block;
+    margin: 0px;
+    padding: 10px 3px 10px 3px ;
+    font-size: 10px;
+    text-align: left;
+}
+
+footer .categorias .lista-cat ul li a:hover{
+    background: #1b691a;
+    color: white;
+}   
+
+footer .categorias .lista-cat ul li a{
+    margin: 5px 0px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-radius: 20px;
+}
+
+footer .disc {
+    margin: 0% 10% 0% 10%;
+    font-size: 90%;
+    color: #888888;
+}
+
+footer .lista-inline ul li {
+    display: inline-block;
+    border-right: 2px solid black;
+    margin-bottom: 10px;
+    padding: 0px 18px;
+}
+
+
+footer .lista-inline ul li:last-child{
+    border-right: 0px;
+}
+    
+footer .lista-inline ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+  
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    header .lista-principal {
+        display: none;
+    }
+
+    section article {
+        margin-bottom: 15px;
+    }
+
+    section .articulos .par-arts{
+        border-bottom: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    section .titulo-seccion {
+        margin-bottom: 20px;
+    }
+
+    section {
+        margin-top: 20px;
+    }
+
+    section article:first-child {
+        margin-right: 0px;
+    }
 }

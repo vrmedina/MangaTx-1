@@ -20,6 +20,9 @@
 
 * {
     font-family: 'poppins';
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 header {
@@ -300,6 +303,9 @@ footer .lista-inline ul li a{
     color: black;
 }
 
+.wrapper {
+    display: none;
+}
 
 @media only screen and (max-width: 1280px) {
 
@@ -311,6 +317,10 @@ footer .lista-inline ul li a{
 
     header .lista-principal {
         display: none;
+    }
+
+    .wrapper {
+        display: block;
     }
 
     section article {
@@ -334,4 +344,6 @@ footer .lista-inline ul li a{
     section article:first-child {
         margin-right: 0px;
     }
+
+
 }
